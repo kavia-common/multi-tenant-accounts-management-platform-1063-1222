@@ -1,0 +1,16 @@
+{
+  "name": "accounts_database_migrations",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Knex migrations and seed scripts for the Multi-Tenant Accounts Management Platform database (PostgreSQL).",
+  "scripts": {
+    "db:migrate": "knex migrate:latest --knexfile ./knexfile.js",
+    "db:rollback": "knex migrate:rollback --knexfile ./knexfile.js --all",
+    "db:seed": "knex seed:run --knexfile ./knexfile.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "knex": "^2.5.1",
+    "pg": "^8.11.5"
+  }
+}
